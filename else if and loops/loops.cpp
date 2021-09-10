@@ -102,20 +102,62 @@ int main()
         }
     } while (true);
 }
-//) Write a Program to Reverse a given Number N by user
+// //) Write a Program to Reverse a given Number N by user
 #include <iostream>
 using namespace std;
 int main()
 {
-    //n=25-->secPlace=n/10-->firstPlace= n%2
-    int reversedNumber = 0, n, remainder;
-    cout << "enter the number: " << endl;
+    int n, remainder, reverseNumber = 0;
+    cout << "Enter the number you want to reverse: " << endl;
     cin >> n;
     while (n != 0)
     {
         remainder = n % 10;
-        reversedNumber = reversedNumber * 10 + remainder;
+        reverseNumber = reverseNumber * 10 + remainder;
         n /= 10;
     }
-    cout << "Reversed Number = " << reversedNumber;
+    cout << "The reverse number is: " << reverseNumber << endl;
+}
+//9) Write a Program to display sum of all digits of a given Number N by user
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, sum = 0, remainder;
+    cout << "Enter a number: " << endl;
+    cin >> n;
+    while (n != 0)
+    {
+        remainder = n % 10;
+        sum = sum + remainder;
+        n /= 10;
+    }
+    cout << "The sum of the individual digits are: " << sum << endl;
+}
+//10) Write a Program to Calculate Power of a Number using inbuilt pow() function by taking two inputs from users as Base and exponent respectively
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+    int base, expo, sum;
+    cout << "Enter num1 and num2: " << endl;
+    cin >> base >> expo;
+    sum = pow(base, expo);
+    cout << "Power of the number is: " << sum << endl;
+}
+//11) Write a Program to Calculate Power of a Number without using inbuilt pow() function by taking two inputs from users as Base and exponent respectively
+#include <iostream>
+using namespace std;
+int main()
+{
+    int base, expo, result = 1;
+    cout << "Enter num1 and num2: " << endl;
+    cin >> base >> expo;
+    while (expo != 0)
+    {
+        result *= base;
+        --expo;
+    }
+    cout << "final value after calculating the power: " << result << endl;
 }
