@@ -76,3 +76,66 @@ int main()
     
     */
 }
+//checking which number is biggest
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a, b, c;
+    cin >> a >> b >> c;
+    if (a > b)
+    {
+        if (a > c)
+        {
+            cout << "a is the biggest number" << endl;
+        }
+        else
+        {
+            cout << "c is the biggest number" << endl;
+        }
+    }
+    else if (b > a)
+    {
+        if (b > c)
+        {
+            cout << "b is the biggest number" << endl;
+        }
+        else
+        {
+            cout << "c is the biggest number" << endl;
+        }
+    }
+    return 0;
+}
+//check whether the number is even or odd
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin >> n;
+    if (n % 2 == 0)
+    {
+        cout << "This is an even number " << n << endl;
+    }
+    else
+    {
+        cout << "this is an odd number " << n << endl;
+    }
+    return 0;
+}
+//Not printing all the numbers from 1 to 100 which is divisible by 3
+#include <iostream>
+using namespace std;
+int main()
+{
+    for (int i = 0; i <= 100; i++)
+    {
+        if (i % 3 == 0)
+        {
+            continue;
+        }
+        cout << i << endl;
+    }
+    return 0;
+}
