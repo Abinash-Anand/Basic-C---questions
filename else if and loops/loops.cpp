@@ -161,3 +161,59 @@ int main()
     }
     cout << "final value after calculating the power: " << result << endl;
 }
+//12) Write a Program to Check Whether a Number N entered by user is Palindrome or Not
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, reverseNumber = 0, remainder = 0, tempNum = 0;
+    cout << "Enter a sequence of numbers: " << endl;
+    cin >> n;
+    tempNum = n;
+
+    while (n != 0)
+    {
+        //reversing the number
+        remainder = n % 10;
+        reverseNumber = reverseNumber * 10 + remainder;
+        n = n / 10;
+    }
+    cout << "The reversed sequence of the numbers: " << reverseNumber << endl;
+    cout << "The original sequence of the number: " << tempNum << endl;
+    if (reverseNumber == tempNum)
+    {
+        cout << "The sequence of the number is Palindrome! " << tempNum << endl;
+    }
+    else
+    {
+        cout << "The sequence of the number is not Palindrome!" << endl;
+    }
+}
+//13) Write a Program to Check Whether a Number is Prime or Not
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+    bool isPrime = true;
+    cout << "Enter the number: " << endl;
+    cin >> n;
+    //0 and 1 are not prime numbers
+    if (n == 0 || n == 1)
+    {
+        isPrime = false;
+        cout << "Not a prime number!" << endl;
+    }
+    for (int i = 2; i <= n / 2; i++)
+        if (n % i == 0)
+        {
+            isPrime = false;
+            break;
+        }
+    if (isPrime)
+    {
+        cout << "The number is prime!!" << n << endl;
+    }
+    else
+        cout << "Not a prime number!" << endl;
+}
