@@ -228,7 +228,21 @@ int main()
     bool isPrime = true;
     cout << "Enter the two intervals: " << endl;
     cin >> n1 >> n2;
-    if (n1 == 0 || n1 == 1 || n2 == 0 || n2 == 1)
+    if (n1 == 0 || n1 == 1)
     {
+        isPrime = false;
+        cout << "Not a prime number!" << endl;
     }
+    for (int i = 2; i <= n / 2; i++)
+        if (n % i == 0)
+        {
+            isPrime = false;
+            break;
+        }
+    if (isPrime)
+    {
+        cout << "The number is prime!!" << n << endl;
+    }
+    else
+        cout << "Not a prime number!" << endl;
 }
